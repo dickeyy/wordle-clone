@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <link rel='icon' href='https://kyledickey.me/images/favicon.png' />
+    <title>Wordle Clone</title>
+</head>
+<body>
+    <div class='container' id="activity">
+        <h1>Waddle</h1>
+        <p id='p'></p>
+        <div class='checker'>
+            <div class='column'>
+                <div class='col-item' id='div-1-1'>
+                    <p class='item-p' id='item-1-1'></p>
+                </div>
+                <div class='col-item' id='div-1-2'>
+                    <p class='item-p' id='item-1-2'></p>
+                </div>
+                <div class='col-item' id='div-1-3'>
+                    <p class='item-p' id='item-1-3'></p>
+                </div>
+                <div class='col-item' id='div-1-4'>
+                    <p class='item-p' id='item-1-4'></p>
+                </div>
+                <div class='col-item' id='div-1-5'>
+                    <p class='item-p' id='item-1-5'></p>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='col-item' id='div-2-1'>
+                    <p class='item-p' id='item-2-1'></p>
+                </div>
+                <div class='col-item' id='div-2-2'>
+                    <p class='item-p' id='item-2-2'></p>
+                </div>
+                <div class='col-item' id='div-2-3'>
+                    <p class='item-p' id='item-2-3'></p>
+                </div>
+                <div class='col-item' id='div-2-4'>
+                    <p class='item-p' id='item-2-4'></p>
+                </div>
+                <div class='col-item' id='div-2-5'>
+                    <p class='item-p' id='item-2-5'></p>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='col-item' id='div-3-1'>
+                    <p class='item-p' id='item-3-1'></p>
+                </div>
+                <div class='col-item' id='div-3-2'>
+                    <p class='item-p' id='item-3-2'></p>
+                </div>
+                <div class='col-item' id='div-3-3'>
+                    <p class='item-p' id='item-3-3'></p>
+                </div>
+                <div class='col-item' id='div-3-4'>
+                    <p class='item-p' id='item-3-4'></p>
+                </div>
+                <div class='col-item' id='div-3-5'>
+                    <p class='item-p' id='item-3-5'></p>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='col-item' id='div-4-1'>
+                    <p class='item-p' id='item-4-1'></p>
+                </div>
+                <div class='col-item' id='div-4-2'>
+                    <p class='item-p' id='item-4-2'></p>
+                </div>
+                <div class='col-item' id='div-4-3'>
+                    <p class='item-p' id='item-4-3'></p>
+                </div>
+                <div class='col-item' id='div-4-4'>
+                    <p class='item-p' id='item-4-4'></p>
+                </div>
+                <div class='col-item' id='div-4-5'>
+                    <p class='item-p' id='item-4-5'></p>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='col-item' id='div-5-1'>
+                    <p class='item-p' id='item-5-1'></p>
+                </div>
+                <div class='col-item' id='div-5-2'>
+                    <p class='item-p' id='item-5-2'></p>
+                </div>
+                <div class='col-item' id='div-5-3'>
+                    <p class='item-p' id='item-5-3'></p>
+                </div>
+                <div class='col-item' id='div-5-4'>
+                    <p class='item-p' id='item-5-4'></p>
+                </div>
+                <div class='col-item' id='div-5-5'>
+                    <p class='item-p' id='item-5-5'></p>
+                </div>
+            </div>
+            <div class='column'>
+                <div class='col-item' id='div-6-1'>
+                    <p class='item-p' id='item-6-1'></p>
+                </div>
+                <div class='col-item' id='div-6-2'>
+                    <p class='item-p' id='item-6-2'></p>
+                </div>
+                <div class='col-item' id='div-6-3'>
+                    <p class='item-p' id='item-6-3'></p>
+                </div>
+                <div class='col-item' id='div-6-4'>
+                    <p class='item-p' id='item-6-4'></p>
+                </div>
+                <div class='col-item' id='div-6-5'>
+                    <p class='item-p' id='item-6-5'></p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id='winModal' class='winModal'>
+            <div class='win-mod-cont'>
+                <span class='win-mod-close'></span>
+                <p class='win-mod-p'>You Won!</p>
+                <button class='win-mod-btn' id='win-mod-btn'>Play Again</button>
+            </div>
+
+        </div>
+
+        <div id='loseModal' class='loseModal'>
+            <div class='lose-mod-cont'>
+                <span class='lose-mod-close'></span>
+                <p class='lose-mod-p'>You Lost!</p>
+                <p calss='lose-mod-p2' id='lose-mod-p2'></p>
+                <button class='lose-mod-btn' id='lose-mod-btn'>Play Again</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

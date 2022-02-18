@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 90vh;
+    color: white;
+}
+
+.hits {
+font-size: 2em;
+font-weight: 700;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+    font-family: 'Roboto';
+}
+
+.container {
+    background-color: #1d1d1d;
+    text-align: center;
+}
+ 
+.a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.checker {
+    width: 442px;
+    height: 530px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: black;
+    margin-bottom: 25px;
+    border-radius: 13px;
+}
+
+.column {
+    height: 66px;
+    margin-bottom: 8px;
+}
+
+.col-item {
+    width: 80px;
+    border-radius: 13px;
+    height: 80px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    border: 2px solid #1d1d1d;
+    float: left;
+    text-align: center;
+}
+
+.col-item2 {
+    width: 80px;
+    height: 66px;
+    margin-left: 90px;
+    border: 2px solid #1d1d1d;
+    float: right;
+}
+
+.item-p {
+    text-align: center;
+    margin-top: -1px;
+    font-family: "Roboto";
+    font-size: 60px
+}
+
+.winModal {
+    font-family: "Roboto";
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */ /* Fallback color */
+    color: white;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .win-mod-cont {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 13px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .win-mod-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .win-mod-p {
+      font-size: 50px;
+      font-weight: 700;
+  }
+  
+  .win-mod-close:hover,
+  .win-mod-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .win-mod-btn {
+      background-color: black;
+      border: 3px solid green;
+      border-radius: 13px;
+      color: white;
+      height: 50px ;
+      width: 100px;
+  }
+
+  .win-mod-btn:hover {
+    background-color: green;
+  }
+  
+
+
+
+
+  .loseModal {
+    font-family: "Roboto";
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */ /* Fallback color */
+    color: white;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .lose-mod-cont {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid red;
+    border-radius: 13px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .lose-mod-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .lose-mod-p {
+      font-size: 50px;
+      font-weight: 700;
+  }
+  .lose-mod-p2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+  
+  .wlosein-mod-close:hover,
+  .lose-mod-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lose-mod-btn {
+      background-color: black;
+      border: 3px solid red;
+      border-radius: 13px;
+      color: white;
+      height: 50px ;
+      width: 100px;
+  }
+
+  .lose-mod-btn:hover {
+    background-color: red;
+  }

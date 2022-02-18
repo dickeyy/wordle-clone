@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "wordle-kyledickey-me",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

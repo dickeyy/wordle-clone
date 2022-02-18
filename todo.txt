@@ -1,0 +1,1 @@
+1. Add check for if guessed word is a valid word
