@@ -357,7 +357,7 @@ document.body.onkeyup = function keyPress(e) {
                         letterList.pop()
                     } else if (spaceNum == 5) {
                         spaceNum -- 
-                        i_6_5.innerHTML = ''
+                        i_2_5.innerHTML = ''
                         letterList.pop()
                     }
                 }
@@ -389,7 +389,7 @@ document.body.onkeyup = function keyPress(e) {
                     spaceNum ++
                 }
             } else if (keyCode == 13) {
-                if (letterList.length != 5 && guessNum == 1) {
+                if (letterList.length != 5 && guessNum == 2) {
                     alert("The word is not long enough")
                 } else {
                     guessNum ++ 
@@ -518,7 +518,7 @@ document.body.onkeyup = function keyPress(e) {
                     spaceNum ++
                 }
             } else if (keyCode == 13) {
-                if (letterList.length != 5 && guessNum == 1) {
+                if (letterList.length != 5 && guessNum == 3) {
                     alert("The word is not long enough")
                 } else {
                     guessNum ++ 
@@ -647,7 +647,7 @@ document.body.onkeyup = function keyPress(e) {
                     spaceNum ++
                 }
             } else if (keyCode == 13) {
-                if (letterList.length != 5 && guessNum == 1) {
+                if (letterList.length != 5 && guessNum == 4) {
                     alert("The word is not long enough")
                 } else {
                     guessNum ++ 
@@ -775,7 +775,7 @@ document.body.onkeyup = function keyPress(e) {
                     spaceNum ++
                 }
             } else if (keyCode == 13) {
-                if (letterList.length != 5 && guessNum == 1) {
+                if (letterList.length != 5 && guessNum == 5) {
                     alert("The word is not long enough")
                 } else {
                     guessNum ++ 
