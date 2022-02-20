@@ -421,7 +421,7 @@ function delLetter() {
     }
 }
 
-function enterGuess() {
+function enterGuess(keyCode) {
     if (guessNum == 0) {
         if (letterList.length != 5 && guessNum == 0) {
             alert('Word is not long enough')
@@ -444,6 +444,13 @@ function enterGuess() {
                 }
 
                 winModal.style.display = 'block'
+
+                document.body.onkeydown = function(e) {
+                    if (keyCode == 13) {
+                        window.location.reload()
+                    }
+                }
+
                 winClose.onclick = function(event) {
                     window.location.reload()
                 }
@@ -940,6 +947,13 @@ function enterGuess() {
 
             if (guessNum == 6 && guess != word) {
                 lose = true
+
+                document.body.onkeydown = function(e) {
+                    if (keyCode == 13) {
+                        window.location.reload()
+                    }
+                }
+
                 loseModal.style.display = 'block'
                 loseClose.onclick = function(e) {
                     window.location.reload()
@@ -1059,7 +1073,8 @@ keyBack.onclick = function(e) {
 }
 
 keyEnt.onclick = function(e) {
-    enterGuess()
+    var keyCode = null
+    enterGuess(keyCode)
 }
 
 // Define keyboard code buttons
@@ -1072,7 +1087,7 @@ document.body.onkeydown = function keyPress(e) {
         if (keyCode != 13 && keyCode != 8) {
             addLetter(keyName)
         } else if (keyCode == 13) {
-            enterGuess()
+            enterGuess(keyCode)
         } else if (keyCode == 8) {
             delLetter()
         }
