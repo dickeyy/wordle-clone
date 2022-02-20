@@ -12,9 +12,10 @@ body {
 
 h1 {
     color: white;
-    font-size: 70px;
+    font-size: 60px;
+    margin-top: -1px;
+    margin-bottom: -10px;
     font-family: 'Roboto';
-    margin-top: -170px;
 }
 
 .container {
@@ -230,3 +231,30 @@ h1 {
   .lose-mod-btn:hover {
     background-color: red;
   }
+
+.bottom-p {
+  font-size: 11px;
+  font-family: "Roboto";
+  color: black;
+  font-weight: 500;
+}
+
+.bottom-a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.bottom-a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.top-a {
+  text-decoration: none;
+  color: white;
+}
+
+.top-a:hover {
+  text-decoration: underline;
+}
