@@ -112,7 +112,7 @@ h1 {
 
 .winModal {
     font-family: "Roboto";
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -131,7 +131,7 @@ h1 {
     padding: 20px;
     border: 3px solid green;
     border-radius: 13px;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 300px /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
@@ -173,7 +173,7 @@ h1 {
 
   .loseModal {
     font-family: "Roboto";
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -184,15 +184,19 @@ h1 {
     color: white;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+
+  .loseModal-background {
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
   
   /* Modal Content/Box */
   .lose-mod-cont {
     background-color: black;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
+    width: 300px;
     border: 3px solid red;
     border-radius: 13px;
-    width: 80%; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
