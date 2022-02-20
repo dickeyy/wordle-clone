@@ -80,6 +80,35 @@ const loseModal = document.getElementById('loseModal')
 const loseClose = document.getElementById('lose-mod-btn')
 const loseReveal = document.getElementById('lose-mod-p2')
 
+const keyA = document.getElementById('k_a')
+const keyB = document.getElementById('k_b')
+const keyC = document.getElementById('k_c')
+const keyD = document.getElementById('k_d')
+const keyE = document.getElementById('k_e')
+const keyF = document.getElementById('k_f')
+const keyG = document.getElementById('k_g')
+const keyH = document.getElementById('k_h')
+const keyI = document.getElementById('k_i')
+const keyJ = document.getElementById('k_j')
+const keyK = document.getElementById('k_k')
+const keyL = document.getElementById('k_l')
+const keyM = document.getElementById('k_m')
+const keyN = document.getElementById('k_n')
+const keyO = document.getElementById('k_o')
+const keyP = document.getElementById('k_p')
+const keyQ = document.getElementById('k_q')
+const keyR = document.getElementById('k_r')
+const keyS = document.getElementById('k_s')
+const keyT = document.getElementById('k_t')
+const keyU = document.getElementById('k_u')
+const keyV = document.getElementById('k_v')
+const keyW = document.getElementById('k_w')
+const keyX = document.getElementById('k_x')
+const keyY = document.getElementById('k_y')
+const keyZ = document.getElementById('k_z')
+const keyEnt = document.getElementById('k_enter')
+const keyBack = document.getElementById('k_back')
+
 function getWord() {
     const wordList = ['about','above','abuse','actor','acute','admit','adopt','adult','after','again','agent','agree','ahead','alarm','album','alert','alike','alive','allow','alone','along','alter','among','anger','Angle','angry','apart','apple','apply','arena','argue','arise','array','aside','asset','audio','audit','avoid','award','aware','badly','baker','bases','basic','basis','beach','began','begin','begun','being ','below','bench','billy','birth','black','blame','blind','block','blood','board','boost','booth','bound','brain','brand','bread','break','breed','brief','bring','broad','broke','brown','build','built','buyer','cable','calif','carry','catch','cause','chain','chair','chart','chase','cheap','check','chest','chief','child','china','chose','civil','claim','class','clean','clear','click','clock','close','coach','coast','could','count','court','cover','craft','crash','cream','crime','cross','crowd','crown','curve','cycle','daily','dance','dated','dealt','death','debut','delay','depth','doing','doubt','dozen','draft','drama','drawn','dream','dress','drill','drink','drive','drove','dying','eager','early','earth','eight','elite','empty','enemy','enjoy','enter','entry','equal','error','event','every','exact','exist','extra','faith','false','fault','fiber','field','fifth','fifty','fight','final','first','fixed','flash','fleet','floor','fluid','focus','force','forth','forty','forum','found','frame','frank','fraud','fresh','front','fruit','fully','funny','giant','given','glass','globe','going','grace','grade','grand','grant','grass','great','green','gross','group','grown','guard','guess','guest','guide','happy','harry','heart','heavy','hence','henry','horse','hotel','house','human','ideal','image','index','inner','input','issue','japan','jimmy','joint','jones','judge','known','label','large','laser','later','laugh','layer','learn','lease','least','leave','legal','level','lewis','light','limit','links','lives','local','logic','loose','lower','lucky','lunch','lying','magic','major','maker','march','maria','match','maybe','mayor','meant','media','metal','might','minor','minus','mixed','model','money','month','moral','motor','mount','mouse','mouth','movie','music','needs','never','newly','night','noise','north','noted','novel','nurse','occur','ocean','offer','often','order','other','ought','paint','panel','paper','party','peace','peter','phase','phone','photo','piece','pilot','pitch','place','plain','plane','plant','plate','point','pound','power','press','price','pride','prime','print','prior','prize','proof','proud','prove','queen','quick','quiet','quite','radio','raise','range','rapid','ratio','reach','ready','refer','right','rival','river','robin','roger','roman','rough','round','route','royal','rural','scale','scene','scope','score','sense','serve','seven','shall','shape','share','sharp','sheet','shelf','shell','shift','shirt','shock','shoot','short','shown','sight','since','sixth','sixty','sized','skill','sleep','slide','small','smart','smile','smith','smoke','solid','solve','sorry','sound','south','space','spare','speak','speed','spend','spent','split','spoke','sport','staff','stage','stake','stand','start','state','steam','steel','stick','still','stock','stone','stood','store','storm','story','strip','stuck','study','stuff','style','sugar','suite','super','sweet','table','taken','taste','taxes','teach','teeth','terry','texas','thank','theft','their','theme','there','these','thick','thing','think','third','those','three','threw','throw','tight','times','tired','title','today','topic','total','touch','tough','tower','track','trade','train','treat','trend','trial','tried','tries','truck','truly','trust','truth','twice','under','undue','union','unity','until','upper','upset','urban','usage','usual','valid','value','video','virus','visit','vital','voice','waste','watch','water','wheel','where','which','while','white','whole','whose','woman','women','world','worry','worse','worst','worth','would','wound','write','wrong','wrote','yield','young','youth']
     const wordNum = Math.round(Math.random() * wordList.length)
@@ -98,7 +127,7 @@ var m4 = false
 var m5 = false
 loseReveal.innerHTML = `The word was: ${word}`
 
-function addLetter(keyName) {
+function addLetterToArr(keyName) {
     letterList.push(keyName)
 }
 
@@ -886,4 +915,328 @@ document.body.onkeyup = function keyPress(e) {
             }
         }
     }
+}
+
+// Define functions
+// User adds letter
+function addLetter(letter) {
+    if (guessNum == 0) {
+        if (spaceNum == 0) {
+            i_1_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_1_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_1_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_1_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_1_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    } else if (guessNum == 1) {
+        if (spaceNum == 0) {
+            i_2_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_2_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_2_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_2_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_2_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    } else if (guessNum == 2) {
+        if (spaceNum == 0) {
+            i_3_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_3_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_3_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_3_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_3_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    } else if (guessNum == 3) {
+        if (spaceNum == 0) {
+            i_4_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_4_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_4_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_4_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_4_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    } else if (guessNum == 4) {
+        if (spaceNum == 0) {
+            i_5_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_5_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_5_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_5_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_5_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    } else if (guessNum == 5) {
+        if (spaceNum == 0) {
+            i_6_1.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 1) {
+            i_6_2.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 2) {
+            i_6_3.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 3) {
+            i_6_4.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        } else if (spaceNum == 4) {
+            i_6_5.innerHTML = letter
+            addLetterToArr(letter)
+            spaceNum ++
+        }
+    }
+}
+
+// User deletes letter
+function delLetter() {
+    if (guessNum == 0) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_1_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_1_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_1_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_1_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_1_5.innerHTML = ''
+            letterList.pop()
+        }
+    } else if (guessNum == 1) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_2_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_2_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_2_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_2_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_2_5.innerHTML = ''
+            letterList.pop()
+        }
+    } else if (guessNum == 2) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_3_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_3_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_3_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_3_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_3_5.innerHTML = ''
+            letterList.pop()
+        }
+    } else if (guessNum == 3) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_4_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_4_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_4_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_4_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_4_5.innerHTML = ''
+            letterList.pop()
+        }
+    } else if (guessNum == 4) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_5_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_5_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_5_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_5_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_5_5.innerHTML = ''
+            letterList.pop()
+        }
+    } else if (guessNum == 5) {
+        if (spaceNum == 1) {
+            spaceNum --
+            i_6_1.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 2) {
+            spaceNum --
+            i_6_2.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 3) {
+            spaceNum --
+            i_6_3.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 4) {
+            spaceNum --
+            i_6_4.innerHTML = ''
+            letterList.pop()
+        } else if (spaceNum == 5) {
+            spaceNum --
+            i_6_5.innerHTML = ''
+            letterList.pop()
+        }
+    }
+}
+
+function enterGuess() {
+    if (guessNum == 0) {
+        if (letterList.length != 5 && guessNum == 0) {
+            alert('Word is not long enough')
+        } else {
+            guessNum ++ 
+            spaceNum = 0 
+
+            var guess = letterList.join('')
+
+            if (guess == word) {
+                win = true
+                d_1_1.style.backgroundColor = 'green'
+                d_1_2.style.backgroundColor = 'green'
+                d_1_3.style.backgroundColor = 'green'
+                d_1_4.style.backgroundColor = 'green'
+                d_1_5.style.backgroundColor = 'green'
+
+                for (var i = 0; i < letterList.length; i ++) {
+                    document.getElementById(`k_${letterList[i]}`).style.backgroundColor = 'green'
+                }
+
+                winModal.style.display = 'block'
+                winClose.onclick = function(event) {
+                    window.location.reload()
+                }
+            } else {
+                
+            }
+        }
+    }
+}
+
+keyA.onclick = function(e) {
+    addLetter('a')
+}
+
+keyB.onclick = function(e) {
+    addLetter('b')
+}
+
+keyBack.onclick = function(e) {
+    delLetter()
+}
+
+keyEnt.onclick = function(e) {
+    enterGuess()
 }

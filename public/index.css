@@ -6,33 +6,29 @@ body {
     justify-content: center;
     align-items: center; 
     min-height: 90vh;
+    min-width: 90%;
     color: white;
-}
-
-.hits {
-font-size: 2em;
-font-weight: 700;
 }
 
 h1 {
     color: white;
     font-size: 70px;
     font-family: 'Roboto';
+    margin-top: -170px;
 }
 
 .container {
-    background-color: #1d1d1d;
+    
+    max-width: 90vw;
+    margin: auto;
     text-align: center;
-}
- 
-.a {
-    text-decoration: none;
-    font-weight: 700;
 }
 
 .checker {
-    width: 442px;
-    height: 530px;
+  max-width: 90vw;
+  margin: auto;
+    width: 293px;
+    height: 355px;
     padding-top: 10px;
     padding-left: 10px;
     background-color: black;
@@ -40,15 +36,57 @@ h1 {
     border-radius: 13px;
 }
 
+.keyboard {
+  width: 650px;
+  max-width: 90vw;
+}
+
+.k-button {
+  background-color: black;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 45px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.k-button-enter, .k-button-back {
+  background-color: black;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 75px;
+  height: 45px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.k-button:hover {
+  background-color:rgba(58, 58, 58, 0.4);
+}
+
+.k-button-back:hover {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.k-button-enter:hover {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
 .column {
-    height: 66px;
+  width: fit-content;
+    height: 50px;
     margin-bottom: 8px;
 }
 
 .col-item {
-    width: 80px;
+    width: 50px;
     border-radius: 13px;
-    height: 80px;
+    height: 50px;
     margin-bottom: 3px;
     margin-right: 3px;
     border: 2px solid #1d1d1d;
@@ -68,7 +106,7 @@ h1 {
     text-align: center;
     margin-top: -1px;
     font-family: "Roboto";
-    font-size: 60px
+    font-size: 40px
 }
 
 .winModal {
