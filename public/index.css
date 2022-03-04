@@ -82,6 +82,7 @@ h1 {
   width: fit-content;
     height: 50px;
     margin-bottom: 8px;
+  background-color: red;
 }
 
 .col-item {
