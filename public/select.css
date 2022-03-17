@@ -1,0 +1,47 @@
+.btn-group {
+    margin-top:100px,
+}
+
+.solo-btn {
+    margin-top: 40px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    margin-bottom: 40px;
+    background-color: #1d1d1d;
+    color: white;
+    border: 3px solid green;
+    border-radius: 13px;
+}
+
+.solo-btn:hover {
+    background-color: rgba(0,255,0,0.2);
+}
+
+.multiplayer-btn {
+    width: 250px;
+    height: 70px;
+    font-size: 40px;
+    background-color: #1d1d1d;
+    color: white;
+    border: 3px solid rgb(128, 0, 128);
+    border-radius: 13px;
+}
+
+.multiplayer-btn:hover {
+    background-color: rgba(128,0,128,0.4);
+}
+
+.multiplayer-btn2 {
+    width: 350px;
+    height: 70px;
+    font-size: 40px;
+    background-color: #1d1d1d;
+    color: white;
+    border: 3px solid rgb(128, 0, 128);
+    border-radius: 13px;
+}
+
+.multiplayer-btn2:hover {
+    background-color: rgba(128,0,128,0.4);
+}

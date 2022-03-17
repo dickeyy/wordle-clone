@@ -1,5 +1,6 @@
 import { setStatusBarStyle, StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { render } from 'react-dom';
 import { StyleSheet, Text, View, Button, Alert, TouchableHighlight } from 'react-native';
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
       <View style={styles.frame}>
         <View style={styles.gridRow} >
           <View style={styles.gridItem}> 
-            
+          
           </View>
           <View style={styles.gridItem} />
           <View style={styles.gridItem} />
@@ -372,7 +373,6 @@ function addLetterToArr(letter) {
 function addLetter(letter) {
   if (guessNum == 0) {
     if (spaceNum == 0) {
-
     }
   }
 }

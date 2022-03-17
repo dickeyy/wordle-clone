@@ -1,11 +1,15 @@
 {
   "hosting": {
     "site": "wordle-kyledickey-me",
+    "cleanUrls": true,
     "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "functions": {
+    "runtime": "nodejs16"
   }
 }

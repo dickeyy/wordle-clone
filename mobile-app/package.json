@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "expo start --dev-client --tunnel",
-    "android": "expo run:android --tunnel",
-    "ios": "expo run:ios --tunnel",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --tunnel --web "
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "expo-status-bar": "~1.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-native": "0.64.3",
+    "react-native": "^0.64.3",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
