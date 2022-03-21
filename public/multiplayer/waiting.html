@@ -13,14 +13,26 @@
 </head>
 <body>
     <div class='container' id="activity">
+        <br>
+        <br>
         <h1 class="h1">Waiting to start...</h1>
         <br>
-        <h2 class='h2'>Code: <h2 id='code' class='h2-2'>123</h2></h2>
+        <h2 class='h2'>Code: <h2 id='code' class='h2-2-code'>123</h2></h2>
+        <img class='qrcode' style='display: none;' id='qrcode' src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wordle.dickey.tech&color=1d1d1d'>
+        <br>
+        <br>
+        <div class="tooltip">
+            <textarea readonly class='h2-link' id='copyLink'>wordle.dickey.tech</textarea>
+            <span class="tooltiptext" id="myTooltip">Click to copy link to send to other people</span>
+        </div>
         
         <h2 class='h2'>Players:</h2>
         <h2 class='h2-2' id='players'>1</h2>
 
-        <button id='startGame' style='display: none;' class='multiplayer-btn2'>Start Game</button>
+        <button id='startGame' style='display: none;' class='multiplayer-btn2 start-btn'>Start Game</button>
+        <br>
+        <br>
+        <button id='endGame' style='display: none;' class='multiplayer-btn2 close-btn'>Close Lobby</button>
 
         <div class='username-div'>
             <br>
@@ -45,6 +57,7 @@
                 </div>
             </div>
           </div>
+
         
     </div>
 </body>

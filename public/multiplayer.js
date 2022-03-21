@@ -198,7 +198,10 @@ if (pageName == 'waiting') {
     const gameCode = params.get('code')
     document.getElementById('code').innerHTML = gameCode
 
+    const qrCode = document.getElementById('qrcode')
     const startBtn = document.getElementById('startGame')
+    const copyLink = document.getElementById('copyLink')
+    const endGameBtn = document.getElementById('endGame')
 
     const oRef = ref(rdb, `games/${gameCode}/ownerUid`)
     get(oRef).then((snapshot) => {
@@ -206,6 +209,9 @@ if (pageName == 'waiting') {
 
         if (auth.currentUser.uid == ownerUid) {
             startBtn.style.display = 'inline'
+            endGameBtn.style.display = 'inline'
+            qrCode.style.display = 'inline'
+            qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wordle.dickey.tech/multiplayer/join-game?code=${gameCode}&color=1d1d1d`
         }
     })
 
@@ -241,6 +247,15 @@ if (pageName == 'waiting') {
         })
     });
 
+    onValue((ref(rdb, 'games/' + gameCode + '/lobbyActive')), (snapshot) => {
+        const lobbyActive = snapshot.val()
+
+        if (!lobbyActive) {
+            alert('This lobby has been closed')
+            window.location.replace('../multiplayer.html')
+        }
+    })
+
     startBtn.onclick = function (e) {
         const uRef = ref(rdb, `games/${gameCode}/isStarted`)
         get(uRef).then((snapshot) => {
@@ -252,7 +267,66 @@ if (pageName == 'waiting') {
             window.location.replace(`play.html?code=${gameCode}`)
         })
     }
+
+    endGameBtn.onclick = function (e) {
+        get(ref(rdb, `games/${gameCode}/lobbyActive`)).then((lData) => {
+            const updates = {}
+            updates['games/' + gameCode + '/lobbyActive'] = false
+            updates['games/' + gameCode + '/isActive'] = false
+            update(ref(rdb), updates)
+        })
+    }
+
+    copyLink.onclick = function (e) {
+        copyLink.select();
+        copyLink.setSelectionRange(0, 99999); /* For mobile devices */
+      
+        copyLink.value = `https://wordle.dickey.tech/multiplayer/join-game?code=${gameCode}`
+        navigator.clipboard.writeText(copyLink.value);
+        copyLink.value = 'wordle.dickey.tech'
+    }
 }
 
+// Join via link (qr code)
+if (pageName == 'join-game') {
+    var params = new URLSearchParams(window.location.search);
+    const enteredId = params.get('code')
 
+    await new Promise(r => setTimeout(r, 2000)); // wait for auth to initialize
+    const cUser = auth.currentUser
 
+    getDoc(doc(db, 'games', enteredId)).then(docSnap => { // Check if username is taken
+        if (!docSnap.exists()) { // If username is taken
+            alert('Invalid Game Code');
+        } else {
+            get(ref(rdb, 'games/' + enteredId + '/isActive')).then((data) => {
+                console.log(data.val())
+                if (data.val() == false) {
+                    alert('That game is over')
+                } else {
+                    const pRef = ref(rdb, `games/${enteredId}/playerCount`);
+                    get(pRef).then((snapshot) => {
+                        var playerCountBefore = snapshot.val()
+                        playerCountBefore ++ 
+
+                        const uRef = ref(rdb, `games/${enteredId}/playerUids`);
+                        get(uRef).then((snapshot) => {
+                            var uids = snapshot.val()
+                            console.log(uids)
+
+                            uids.push(cUser.uid)
+
+                            const updates = {}
+                            updates['games/' + enteredId + '/playerCount'] = playerCountBefore
+                            updates['games/' + enteredId + '/playerUids'] = uids
+
+                            return update(ref(rdb), updates)
+                        }). then(() => {
+                            window.location.replace(`./waiting.html?code=${enteredId}`)
+                        })
+                    })
+                }
+            }) 
+        }
+    })
+}
