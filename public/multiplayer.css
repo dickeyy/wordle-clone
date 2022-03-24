@@ -58,6 +58,7 @@
     max-width: 90%;
     height: 38px;
     resize: none;
+    overflow: hidden;
 }
 
 .tooltip {
@@ -98,10 +99,6 @@
     opacity: 1;
   }
 
-.qrcode {
-    border-radius: 5px;
-}
-
 .close-btn {
     border-color: rgb(255,0,0);
 }
@@ -128,7 +125,7 @@
 .h2-2-code {
     font-family: 'Roboto';
     font-size: 50px; 
-    color:rgb(209, 0, 209);
+    color:#d100d1;
     margin-top: 20px
 }
 

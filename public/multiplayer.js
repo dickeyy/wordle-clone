@@ -211,7 +211,7 @@ if (pageName == 'waiting') {
             startBtn.style.display = 'inline'
             endGameBtn.style.display = 'inline'
             qrCode.style.display = 'inline'
-            qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wordle.dickey.tech/multiplayer/join-game?code=${gameCode}&color=1d1d1d`
+            qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wordle.dickey.tech/multiplayer/join-game?code=${gameCode}&bgcolor=1d1d1d&color=d100d1`
         }
     })
 

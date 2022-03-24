@@ -1,0 +1,24 @@
+{
+    "name": "Wordle Popup",
+    "description": "Play wordle in a popup anytime!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/wordle-ce-logo.png",
+            "32": "/images/wordle-ce-logo.png",
+            "48": "/images/wordle-ce-logo.png",
+            "128": "/images/wordle-ce-logo.png"
+        }
+    },
+    "icons": {
+        "16": "/images/wordle-ce-logo.png",
+        "32": "/images/wordle-ce-logo.png",
+        "48": "/images/wordle-ce-logo.png",
+        "128": "/images/wordle-ce-logo.png"
+    }
+}

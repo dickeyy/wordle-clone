@@ -1,0 +1,220 @@
+body {
+    background-color: #1d1d1d;
+    color: white;
+    width: 400px;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 40px;
+    margin-bottom: -5px;
+    margin-top: -1px
+}
+
+.top-a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-a:hover {
+    text-decoration: underline;
+}
+
+.checker {
+    background-color: black;
+    height: 355px;
+    width: 270px;
+    border-radius: 13px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.column {
+    width: 249.999993px;
+    height: 45px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.col-item{
+    height: 43px;
+    width: 43px;
+    float: left;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    margin-right: 2px;
+    border: 2px solid #1d1d1d;
+    border-radius: 13px;
+}
+
+.item-p {
+    font-size: 30px;
+    margin-top: -1px;
+}
+
+.k-button {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.k-button-enter, .k-button-back {
+    background-color: black;
+    color: white;
+    width: 90px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.k-button:hover {
+    background-color:rgba(58, 58, 58, 0.4);
+    border: 3px solid rgba(58,58,58,0.4);
+}
+  
+.k-button-back:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+    border: 3px solid rgba(255,0,0,0.4);
+}
+  
+.k-button-enter:hover {
+    background-color: rgba(0, 255, 0, 0.4);
+    border: 3px solid rgba(0,255,0,0.4);
+}
+
+.winModal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */ /* Fallback color */
+    color: white;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .win-mod-cont {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 13px;
+    width: 250px /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .win-mod-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .win-mod-p {
+      font-size: 50px;
+      font-weight: 700;
+  }
+  
+  .win-mod-close:hover,
+  .win-mod-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .win-mod-btn {
+      background-color: black;
+      border: 3px solid green;
+      border-radius: 13px;
+      color: white;
+      height: 50px ;
+      width: 100px;
+  }
+
+  .win-mod-btn:hover {
+    background-color: green;
+  }
+
+  .loseModal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */ /* Fallback color */
+    color: white;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .loseModal-background {
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .lose-mod-cont {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 300px;
+    border: 3px solid red;
+    border-radius: 13px;
+  }
+  
+  /* The Close Button */
+  .lose-mod-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.lose-mod-p {
+      font-size: 50px;
+      font-weight: 700;
+}
+
+.lose-mod-p2 {
+    margin-top:-20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+  .lose-mod-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .lose-mod-btn {
+      background-color: black;
+      border: 3px solid red;
+      border-radius: 13px;
+      color: white;
+      height: 50px ;
+      width: 100px;
+  }
+
+  .lose-mod-btn:hover {
+    background-color: red;
+  }
