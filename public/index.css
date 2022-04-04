@@ -319,3 +319,24 @@ h1 {
 .top-a:hover {
   text-decoration: underline;
 }
+
+.h2 {
+  font-family: "Roboto";
+  font-size: 30px;
+}
+
+.chrome-btn {
+  margin-top: 10px;
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  margin-bottom: 40px;
+  background-color: #1d1d1d;
+  color: white;
+  border: 3px solid orange;
+  border-radius: 13px;
+}
+
+.chrome-btn:hover {
+  background-color: rgba(255,165,0,0.2);
+}
